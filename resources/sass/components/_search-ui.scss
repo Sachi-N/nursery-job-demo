@@ -1,0 +1,70 @@
+@use "../base/settings" as settings;
+
+// 検索UI
+.search-ui {
+  background: settings.color(card);
+  border: 1px solid settings.color(border);
+  border-radius: settings.radius(12);
+  box-shadow: settings.$shadow-1;
+  padding: settings.space(48);
+  display: grid;
+  gap: settings.space(16);
+
+  &__title {
+    font-size: settings.font-size(title-md);
+    color: settings.color(ink);
+    margin: 0;
+  }
+
+  &__note {
+    margin: settings.space(8) 0 0;
+    color: settings.color(ink-muted);
+    font-size: settings.font-size(sm);
+  }
+
+  &__form {
+    display: grid;
+    gap: settings.space(12);
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+
+  &__field {
+    display: grid;
+    gap: settings.space(8);
+
+    &--full {
+      grid-column: 1 / -1;
+    }
+  }
+
+  &__label {
+    font-size: settings.font-size(sm);
+    color: settings.color(ink-muted);
+  }
+
+  &__input,
+  &__select {
+    border: 1px solid settings.color(border);
+    border-radius: settings.radius(8);
+    padding: settings.space(12);
+    font-size: settings.font-size(md);
+    box-sizing: border-box;
+  }
+
+  &__input--full {
+    width: 100%;
+  }
+
+  &__actions {
+    display: flex;
+    gap: settings.space(12);
+    flex-wrap: wrap;
+    grid-column: 1 / -1;
+    justify-content: center;
+  }
+
+  &__actions .button {
+    font-size: settings.font-size(md);
+  }
+
+}

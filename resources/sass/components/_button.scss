@@ -1,0 +1,42 @@
+@use "../base/settings" as settings;
+
+// ボタン
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: settings.radius(9999);
+  padding: settings.space(12) settings.space(24);
+  font-size: settings.font-size(sm);
+  font-weight: settings.font-weight(medium);
+  line-height: settings.line-height(tight);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: settings.$shadow-1;
+  }
+
+  &--primary {
+    background: settings.color(accent);
+    color: settings.color(ink);
+  }
+
+  &--ghost {
+    background: transparent;
+    color: settings.color(primary-strong);
+    border-color: settings.color(primary-strong);
+  }
+
+  &--light {
+    background: settings.color(primary-soft);
+    color: settings.color(primary-strong);
+  }
+
+  &--dark {
+    background: settings.color(ink);
+    color: settings.color(card);
+  }
+}

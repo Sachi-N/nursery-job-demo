@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ほいくjobサーチ | 求人検索</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700&family=Shippori+Mincho+B1:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../public/css/job-search.css" />
+</head>
+<body class="job-search-page">
+  <header class="job-search-header">
+    <div class="job-search-header__inner">
+      <a class="job-search-logo" href="./top.html">ほいくjobサーチ</a>
+      <nav class="job-search-nav">
+        <a class="job-search-nav__link" href="./job-search.html">求人検索</a>
+        <a class="job-search-nav__link" href="#feature">特集</a>
+        <a class="job-search-nav__link" href="#support">サポート</a>
+        <a class="job-search-nav__link" href="#flow">転職の流れ</a>
+      </nav>
+      <div class="job-search-header__actions">
+        <button class="button button--ghost" type="button">会員登録</button>
+        <button class="button button--primary" type="button">求人を探す</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="job-search">
+    <section class="job-search-hero">
+        <div class="container container--narrow">
+        <div class="job-search-hero__inner">
+          <div class="job-search-hero__content">
+            <h1 class="job-search-hero__title">求人検索</h1>
+          </div>
+          <div class="job-search-hero__search">
+            <!-- include: ../parts/search-ui.html -->
+            <section class="search-ui">
+              <h2 class="search-ui__title">かんたん求人検索</h2>
+              <p class="search-ui__note">希望条件を入力すると、おすすめがすぐに表示されます。</p>
+              <form class="search-ui__form">
+                <label class="search-ui__field">
+                  <span class="search-ui__label">勤務地</span>
+                  <select class="search-ui__select" name="area">
+                    <option value="" selected disabled>勤務地を選ぶ</option>
+                    <option>東京都</option>
+                    <option>神奈川県</option>
+                    <option>埼玉県</option>
+                    <option>千葉県</option>
+                  </select>
+                </label>
+                <label class="search-ui__field">
+                  <span class="search-ui__label">雇用形態</span>
+                  <select class="search-ui__select" name="employment">
+                    <option value="" selected disabled>雇用形態を選ぶ</option>
+                    <option>正社員</option>
+                    <option>パート・アルバイト</option>
+                    <option>派遣</option>
+                    <option>契約社員</option>
+                  </select>
+                </label>
+                <label class="search-ui__field">
+                  <span class="search-ui__label">施設形態</span>
+                  <select class="search-ui__select" name="facility">
+                    <option value="" selected disabled>施設形態を選ぶ</option>
+                    <option>認可保育園</option>
+                    <option>認定こども園</option>
+                    <option>小規模保育</option>
+                    <option>企業内保育</option>
+                  </select>
+                </label>
+                <label class="search-ui__field">
+                  <span class="search-ui__label">給料</span>
+                  <select class="search-ui__select" name="salary">
+                    <option value="" selected disabled>給料を選ぶ</option>
+                    <option>月給20万円以上</option>
+                    <option>月給23万円以上</option>
+                    <option>月給26万円以上</option>
+                    <option>月給30万円以上</option>
+                  </select>
+                </label>
+                <label class="search-ui__field search-ui__field--full">
+                  <span class="search-ui__label">フリーワード</span>
+                  <input class="search-ui__input search-ui__input--full" type="text" name="keyword" placeholder="例：東京 / 認可保育園 / 駅チカ" />
+                </label>
+                <div class="search-ui__actions">
+                  <button class="search-ui__button button button--primary" type="submit">検索する</button>
+                  <button class="search-ui__button button button--ghost" type="button">条件をクリア</button>
+                </div>
+              </form>
+            </section>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="job-search-footer">
+    <div class="job-search-footer__inner">
+      <div>
+        <p class="job-search-logo">ほいくjobサーチ</p>
+        <p class="job-search-footer__text">保育士のための求人検索・転職サポート</p>
+      </div>
+      <div class="job-search-footer__links">
+        <a href="./job-search.html">求人検索</a>
+        <a href="#feature">特集</a>
+        <a href="#support">サポート</a>
+        <a href="#flow">転職の流れ</a>
+      </div>
+      <p class="job-search-footer__copy">© 2024 hoikujob Search. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

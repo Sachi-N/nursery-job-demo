@@ -1,0 +1,412 @@
+@use "../base/settings" as settings;
+@use "../base/mixin" as mixin;
+@use "../components/search-ui";
+@use "../components/header";
+@use "../components/footer";
+@use "../components/container";
+@use "../components/button";
+
+// ヘッダー
+.top {
+  color: settings.color(ink);
+  background: settings.color(canvas);
+  font-family: settings.$font-family-rounded;
+}
+
+// レイアウト共通
+.top-main {
+  width: 100%;
+  margin: 0;
+  padding: settings.space(32) 0 settings.space(64);
+  display: grid;
+  gap: settings.space(40);
+
+  @include mixin.mq(lg) {
+    padding: settings.space(48) 0 settings.space(64);
+  }
+}
+
+// ボタン
+
+// ヒーローエリア
+.top-hero {
+  position: relative;
+  display: grid;
+  gap: settings.space(32);
+  padding: settings.space(32);
+  border-radius: 0;
+  background: linear-gradient(
+    135deg,
+    settings.color(card) 0%,
+    settings.color(primary-soft) 60%,
+    settings.color(accent-soft) 100%
+  );
+  overflow: hidden;
+  margin: 0 calc(50% - 50vw);
+
+  @include mixin.mq(md) {
+    align-items: start;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.6;
+    z-index: 0;
+  }
+
+  &::before {
+    width: 320px;
+    height: 320px;
+    background: settings.color(accent-soft);
+    top: -120px;
+    right: -120px;
+  }
+
+  &::after {
+    width: 240px;
+    height: 240px;
+    background: settings.color(primary-soft);
+    bottom: -120px;
+    left: -60px;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+
+  &__eyebrow {
+    display: inline-flex;
+    padding: settings.space(8) settings.space(16);
+    border-radius: settings.radius(9999);
+    background: settings.color(primary-soft);
+    color: settings.color(primary-strong);
+    font-size: settings.font-size(sm);
+    margin: 0;
+  }
+
+  &__title {
+    font-size: clamp(28px, 3vw, 40px);
+    line-height: settings.line-height(tight);
+    margin: settings.space(16) 0 0;
+  }
+
+  &__lead {
+    margin: settings.space(16) 0 0;
+    font-size: settings.font-size(lg);
+    color: settings.color(ink-muted);
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: settings.space(8);
+    margin: settings.space(20) 0 0;
+  }
+
+  &__stats {
+    display: grid;
+    gap: settings.space(12);
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    margin-top: settings.space(24);
+  }
+}
+
+// タグ・統計
+
+// メインボタンエリア
+.top-hero-actions {
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: settings.space(12);
+    justify-content: center;
+  }
+}
+
+.top-stat-card {
+  background: settings.color(card);
+  border-radius: settings.radius(12);
+  padding: settings.space(16);
+  border: 1px solid settings.color(border);
+
+  &__value {
+    font-size: settings.font-size(title-md);
+    margin: 0 0 settings.space(8);
+  }
+
+  &__label {
+    margin: 0;
+    font-size: settings.font-size(xs);
+    color: settings.color(ink-muted);
+  }
+}
+
+// 検索エリア
+.top-search {
+  // @include mixin.card;
+  // background: settings.color(card);
+}
+
+.search-ui {
+  margin-top: settings.space(20);
+}
+
+// セクション見出し
+.top-section {
+  &__header {
+    display: grid;
+    gap: settings.space(8);
+  }
+
+  &__title {
+    font-size: settings.font-size(title-md);
+    margin: 0;
+  }
+
+  &__lead {
+    margin: 0;
+    color: settings.color(ink-muted);
+    font-size: settings.font-size(md);
+  }
+}
+
+// 特集
+.top-highlight {
+  &__grid {
+    display: grid;
+    gap: settings.space(16);
+    margin-top: settings.space(24);
+
+    @include mixin.mq(lg) {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+  &__card {
+    @include mixin.card;
+    background: settings.color(card);
+    display: grid;
+    gap: settings.space(12);
+  }
+
+  &__badge {
+    align-self: flex-start;
+    padding: settings.space(4) settings.space(12);
+    border-radius: settings.radius(9999);
+    background: settings.color(primary-soft);
+    color: settings.color(primary-strong);
+    font-size: settings.font-size(xs);
+    margin: 0;
+
+    &--pink {
+      background: settings.color(danger);
+      color: settings.color(card);
+    }
+
+    &--yellow {
+      background: settings.color(accent);
+      color: settings.color(ink);
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-size: settings.font-size(lg);
+  }
+
+  &__text {
+    margin: 0;
+    color: settings.color(ink-muted);
+  }
+
+  &__meta {
+    margin: 0;
+    font-size: settings.font-size(sm);
+    color: settings.color(primary-strong);
+  }
+}
+
+// サポート
+.top-support {
+  display: grid;
+  gap: settings.space(24);
+  background: settings.color(card);
+  border-radius: settings.radius(16);
+  padding: settings.space(32);
+  border: 1px solid settings.color(border);
+
+  &__content {
+    display: grid;
+    gap: settings.space(12);
+  }
+
+  &__eyebrow {
+    margin: 0;
+    color: settings.color(primary-strong);
+    font-size: settings.font-size(sm);
+  }
+
+  &__title {
+    margin: 0;
+    font-size: settings.font-size(title-md);
+  }
+
+  &__text {
+    margin: 0;
+    color: settings.color(ink-muted);
+  }
+
+  &__list {
+    margin: settings.space(8) 0 0;
+    padding-left: settings.space(20);
+    color: settings.color(ink);
+    display: grid;
+    gap: settings.space(8);
+  }
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: settings.space(12);
+    margin-top: settings.space(8);
+  }
+
+  &__panel {
+    display: grid;
+    gap: settings.space(16);
+  }
+
+  &__card {
+    @include mixin.card;
+    display: grid;
+    gap: settings.space(12);
+
+    &--light {
+      background: settings.color(primary-soft);
+    }
+  }
+
+  &__card-title {
+    margin: 0;
+    font-size: settings.font-size(lg);
+  }
+
+  &__card-text {
+    margin: 0;
+    color: settings.color(ink-muted);
+  }
+
+  &__card-info {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: settings.space(12);
+  }
+
+  &__card-label {
+    margin: 0;
+    font-size: settings.font-size(xs);
+    color: settings.color(ink-muted);
+  }
+
+  &__card-value {
+    margin: settings.space(4) 0 0;
+    font-size: settings.font-size(lg);
+  }
+}
+
+// 転職の流れ
+.top-flow {
+  &__grid {
+    display: grid;
+    gap: settings.space(16);
+    margin-top: settings.space(24);
+  }
+
+  &__card {
+    background: settings.color(card);
+    border-radius: settings.radius(12);
+    padding: settings.space(20);
+    border: 1px dashed settings.color(primary-strong);
+    display: grid;
+    gap: settings.space(8);
+  }
+
+  &__step {
+    margin: 0;
+    font-size: settings.font-size(xs);
+    color: settings.color(primary-strong);
+  }
+
+  &__title {
+    margin: 0;
+    font-size: settings.font-size(lg);
+  }
+
+  &__text {
+    margin: 0;
+    color: settings.color(ink-muted);
+  }
+}
+
+// 選ばれる理由
+.top-reason {
+  &__grid {
+    display: grid;
+    gap: settings.space(16);
+    margin-top: settings.space(24);
+  }
+
+  &__card {
+    background: settings.color(card);
+    border-radius: settings.radius(12);
+    padding: settings.space(24);
+    border: 1px solid settings.color(border);
+    display: grid;
+    gap: settings.space(8);
+  }
+
+  &__title {
+    margin: 0;
+    font-size: settings.font-size(lg);
+  }
+
+  &__text {
+    margin: 0;
+    color: settings.color(ink-muted);
+  }
+}
+
+// FAQ
+.top-faq {
+  &__list {
+    display: grid;
+    gap: settings.space(12);
+    margin-top: settings.space(24);
+  }
+
+  &__item {
+    background: transparent;
+    border-radius: 0;
+    padding: settings.space(16) 0;
+    border: none;
+    border-bottom: 1px dashed settings.color(border);
+
+    summary {
+      cursor: pointer;
+      font-weight: settings.font-weight(medium);
+    }
+
+    p {
+      margin: settings.space(12) 0 0;
+      color: settings.color(ink-muted);
+    }
+  }
+}
+
+// フッター

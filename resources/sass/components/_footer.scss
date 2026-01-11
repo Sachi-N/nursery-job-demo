@@ -1,0 +1,43 @@
+@use "../base/settings" as settings;
+
+// 共通フッター
+.top-footer,
+.job-search-footer {
+  background: settings.color(card);
+  border-top: 1px solid settings.color(border);
+}
+
+.top-footer__inner,
+.job-search-footer__inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: settings.space(32) settings.space(20);
+  display: grid;
+  gap: settings.space(16);
+}
+
+.top-footer__text,
+.job-search-footer__text {
+  margin: 0;
+  color: settings.color(ink-muted);
+}
+
+.top-footer__links,
+.job-search-footer__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: settings.space(16);
+
+  a {
+    color: settings.color(ink);
+    text-decoration: none;
+    font-size: settings.font-size(sm);
+  }
+}
+
+.top-footer__copy,
+.job-search-footer__copy {
+  margin: 0;
+  font-size: settings.font-size(xs);
+  color: settings.color(ink-muted);
+}

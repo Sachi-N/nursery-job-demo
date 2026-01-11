@@ -1,0 +1,113 @@
+@use "./tokens" as tokens;
+@use "sass:map";
+
+//フォントファミリー
+$font-family-sans: tokens.$font-family-sans;
+$font-family-rounded: tokens.$font-family-rounded;
+$font-family-serif: "Hiragino Mincho ProN", "Yu Mincho", serif;
+$font-family-mono: tokens.$font-family-mono;
+
+//フォントサイズPC
+$font-sizes: (
+  xs: tokens.$font-size-12,
+  sm: tokens.$font-size-14,
+  md: tokens.$font-size-16,
+  lg: tokens.$font-size-20,
+  xl: tokens.$font-size-24,
+  title-md: tokens.$font-size-28,
+  title-lg: tokens.$font-size-32
+);
+
+//フォントサイズSP
+$font-sizes-sp: (
+  xs: tokens.$font-size-12,
+  sm: tokens.$font-size-14,
+  md: tokens.$font-size-16,
+  lg: tokens.$font-size-18,
+  xl: tokens.$font-size-20,
+  title-md: tokens.$font-size-24,
+  title-lg: tokens.$font-size-28
+);
+
+//行間
+$line-heights: (
+  tight: tokens.$line-height-tight,
+  base: tokens.$line-height-base,
+  loose: tokens.$line-height-loose
+);
+
+//フォントウェイト
+$font-weights: (
+  regular: tokens.$font-weight-regular,
+  medium: tokens.$font-weight-medium,
+  bold: tokens.$font-weight-bold
+);
+
+//カラーパレット
+$colors: (
+  text: tokens.$color-gray-900,
+  text-muted: tokens.$color-gray-500,
+  ink: tokens.$color-gray-900,
+  ink-muted: tokens.$color-gray-500,
+  canvas: tokens.$color-gray-100,
+  card: tokens.$color-white,
+  border: tokens.$color-gray-300,
+  primary: tokens.$color-blue-400,
+  primary-strong: tokens.$color-blue-500,
+  primary-soft: tokens.$color-blue-100,
+  accent: tokens.$color-yellow-300,
+  accent-soft: tokens.$color-yellow-100,
+  success: tokens.$color-green-500,
+  success-soft: tokens.$color-green-100,
+  danger: tokens.$color-pink-500
+);
+
+//スペーシング
+$spaces: (
+  4: tokens.$space-4,
+  8: tokens.$space-8,
+  12: tokens.$space-12,
+  16: tokens.$space-16,
+  20: tokens.$space-20,
+  24: tokens.$space-24,
+  32: tokens.$space-32,
+  40: tokens.$space-40,
+  48: tokens.$space-48,
+  56: tokens.$space-56,
+  64: tokens.$space-64
+);
+
+//container
+$containers: (
+  default: tokens.$container-default,
+  narrow: tokens.$container-narrow
+);
+
+//ボーダー半径
+$radii: (
+  4: tokens.$radius-4,
+  8: tokens.$radius-8,
+  12: tokens.$radius-12,
+  16: tokens.$radius-16,
+  9999: tokens.$radius-full
+);
+
+//シャドウ
+$shadow-1: 0 8px 24px rgba(15, 23, 42, 0.12);
+
+@function _get($map, $key, $label) {
+  @if map.has-key($map, $key) {
+    @return map.get($map, $key);
+  }
+  @error "Unknown #{$label} key: #{$key}. Allowed: #{map.keys($map)}";
+}
+
+//mapにないkeyはエラーにする
+@function space($key) { @return _get($spaces, $key, "space"); }
+@function font-size($key) { @return _get($font-sizes, $key, "font-size"); }
+@function font-size-sp($key) { @return _get($font-sizes-sp, $key, "font-size-sp"); }
+@function color($key) { @return _get($colors, $key, "color"); }
+@function line-height($key) { @return _get($line-heights, $key, "line-height"); }
+@function font-weight($key) { @return _get($font-weights, $key, "font-weight"); }
+@function radius($key) { @return _get($radii, $key, "radius"); }
+@function container($key) { @return _get($containers, $key, "container"); }

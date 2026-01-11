@@ -1,0 +1,91 @@
+
+//font-family
+$font-family-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+$font-family-rounded: "M PLUS Rounded 1c", "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+$font-family-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+//font size
+$font-size-12: 12px;
+$font-size-14: 14px;
+$font-size-16: 16px;
+$font-size-18: 18px;
+$font-size-20: 20px;
+$font-size-24: 24px;
+$font-size-28: 28px;
+$font-size-32: 32px;
+
+//font-weight
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+//line-height
+$line-height-tight: 1.2;
+$line-height-base: 1.6;
+$line-height-loose: 1.8;
+
+
+//color
+$color-white: #ffffff;
+$color-black: #000000;
+$color-blue-100: #e6f6fb;
+$color-blue-200: #bfe8f5;
+$color-blue-300: #80d3ea;
+$color-blue-400: #3fbad8;
+$color-blue-500: #1b9bbf;
+$color-pink-100: #fde8f2;
+$color-pink-200: #fbc6df;
+$color-pink-300: #f596c2;
+$color-pink-400: #e764a3;
+$color-pink-500: #cf3f85;
+$color-yellow-100: #fff7d6;
+$color-yellow-200: #ffecad;
+$color-yellow-300: #ffd778;
+$color-yellow-400: #f7be3f;
+$color-yellow-500: #e39a18;
+$color-gray-100: #f5f7fa;
+$color-gray-200: #e4e7eb;
+$color-gray-300: #cbd2d9;
+$color-gray-400: #9aa5b1;
+$color-gray-500: #616e7c;
+$color-gray-900: #111111;
+$color-gray-900: #333333;
+$color-green-100: #e6f9ef;
+$color-green-200: #c3f0d7;
+$color-green-300: #8ddfba;
+$color-green-400: #52c796;
+$color-green-500: #2f9f73;
+
+//Spacing scale (first is 4px, then 8px increments)
+$space-4: 4px;
+$space-8: 8px;
+$space-12: 12px;
+$space-16: 16px;
+$space-20: 20px;
+$space-24: 24px;
+$space-32: 32px;
+$space-40: 40px;
+$space-48: 48px;
+$space-56: 56px;
+$space-64: 64px;
+
+//container
+$container-default: 1180px;
+$container-narrow: 960px;
+
+//radius
+$radius-4: 4px;
+$radius-8: 8px;
+$radius-12: 12px;
+$radius-16: 16px;
+$radius-full: 9999px;
+
+//z-index
+$z-dropdown: 100;
+$z-sticky: 200;
+$z-modal: 1000;
+$z-toast: 1100;
+
+//shadow
+$shadow-sm: 0 1px 2px rgba(0,0,0,.08);
+$shadow-md: 0 4px 12px rgba(0,0,0,.12);

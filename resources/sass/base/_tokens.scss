@@ -1,8 +1,18 @@
-
 //font-family
-$font-family-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
-$font-family-rounded: "M PLUS Rounded 1c", "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
-$font-family-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+$font-family-sans:
+  ui-sans-serif,
+  system-ui,
+  -apple-system,
+  'Segoe UI',
+  roboto,
+  'Noto Sans JP',
+  'Hiragino Kaku Gothic ProN',
+  'Yu Gothic',
+  sans-serif;
+$font-family-rounded: 'M PLUS Rounded 1c', 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Yu Gothic',
+  sans-serif;
+$font-family-mono: ui-monospace, sfmono-regular, menlo, monaco, consolas, 'Liberation Mono',
+  'Courier New', monospace;
 
 //font size
 $font-size-12: 12px;
@@ -23,7 +33,6 @@ $font-weight-bold: 700;
 $line-height-tight: 1.2;
 $line-height-base: 1.6;
 $line-height-loose: 1.8;
-
 
 //color
 $color-white: #ffffff;
@@ -87,5 +96,5 @@ $z-modal: 1000;
 $z-toast: 1100;
 
 //shadow
-$shadow-sm: 0 1px 2px rgba(0,0,0,.08);
-$shadow-md: 0 4px 12px rgba(0,0,0,.12);
+$shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.08);
+$shadow-md: 0 4px 12px rgba(0, 0, 0, 0.12);

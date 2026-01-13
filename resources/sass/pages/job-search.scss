@@ -1,10 +1,10 @@
-@use "../base/settings" as settings;
-@use "../base/mixin" as mixin;
-@use "../components/search-ui";
-@use "../components/header";
-@use "../components/footer";
-@use "../components/container";
-@use "../components/button";
+@use '../base/settings' as settings;
+@use '../base/mixin' as mixin;
+@use '../components/search-ui';
+@use '../components/header';
+@use '../components/footer';
+@use '../components/container';
+@use '../components/button';
 
 // ページ共通
 .job-search-page {

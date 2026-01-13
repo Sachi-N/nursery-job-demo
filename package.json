@@ -1,0 +1,29 @@
+{
+  "name": "nursery-job-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier --write \"resources/**/*.{html,scss}\"",
+    "format:check": "prettier --check \"resources/**/*.{html,scss}\"",
+    "lint:styles": "stylelint \"resources/**/*.scss\"",
+    "lint:styles:fix": "stylelint \"resources/**/*.scss\" --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sachi-N/nursery-job-demo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sachi-N/nursery-job-demo/issues"
+  },
+  "homepage": "https://github.com/Sachi-N/nursery-job-demo#readme",
+  "devDependencies": {
+    "prettier": "^3.2.5",
+    "stylelint": "^16.26.1",
+    "stylelint-config-standard-scss": "^14.0.0",
+    "stylelint-scss": "^6.10.1"
+  }
+}

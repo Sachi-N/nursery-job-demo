@@ -1,4 +1,4 @@
-@use "../base/settings" as settings;
+@use '../base/settings' as settings;
 
 // ボタン
 .button {
@@ -12,7 +12,9 @@
   line-height: settings.line-height(tight);
   border: 1px solid transparent;
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 
   &:hover {
     transform: translateY(-1px);

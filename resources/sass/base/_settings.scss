@@ -1,10 +1,10 @@
-@use "./tokens" as tokens;
-@use "sass:map";
+@use './tokens' as tokens;
+@use 'sass:map';
 
 //フォントファミリー
 $font-family-sans: tokens.$font-family-sans;
 $font-family-rounded: tokens.$font-family-rounded;
-$font-family-serif: "Hiragino Mincho ProN", "Yu Mincho", serif;
+$font-family-serif: 'Hiragino Mincho ProN', 'Yu Mincho', serif;
 $font-family-mono: tokens.$font-family-mono;
 
 //フォントサイズPC
@@ -15,7 +15,7 @@ $font-sizes: (
   lg: tokens.$font-size-20,
   xl: tokens.$font-size-24,
   title-md: tokens.$font-size-28,
-  title-lg: tokens.$font-size-32
+  title-lg: tokens.$font-size-32,
 );
 
 //フォントサイズSP
@@ -26,21 +26,21 @@ $font-sizes-sp: (
   lg: tokens.$font-size-18,
   xl: tokens.$font-size-20,
   title-md: tokens.$font-size-24,
-  title-lg: tokens.$font-size-28
+  title-lg: tokens.$font-size-28,
 );
 
 //行間
 $line-heights: (
   tight: tokens.$line-height-tight,
   base: tokens.$line-height-base,
-  loose: tokens.$line-height-loose
+  loose: tokens.$line-height-loose,
 );
 
 //フォントウェイト
 $font-weights: (
   regular: tokens.$font-weight-regular,
   medium: tokens.$font-weight-medium,
-  bold: tokens.$font-weight-bold
+  bold: tokens.$font-weight-bold,
 );
 
 //カラーパレット
@@ -59,7 +59,7 @@ $colors: (
   accent-soft: tokens.$color-yellow-100,
   success: tokens.$color-green-500,
   success-soft: tokens.$color-green-100,
-  danger: tokens.$color-pink-500
+  danger: tokens.$color-pink-500,
 );
 
 //スペーシング
@@ -74,13 +74,13 @@ $spaces: (
   40: tokens.$space-40,
   48: tokens.$space-48,
   56: tokens.$space-56,
-  64: tokens.$space-64
+  64: tokens.$space-64,
 );
 
 //container
 $containers: (
   default: tokens.$container-default,
-  narrow: tokens.$container-narrow
+  narrow: tokens.$container-narrow,
 );
 
 //ボーダー半径
@@ -89,25 +89,49 @@ $radii: (
   8: tokens.$radius-8,
   12: tokens.$radius-12,
   16: tokens.$radius-16,
-  9999: tokens.$radius-full
+  9999: tokens.$radius-full,
 );
 
 //シャドウ
 $shadow-1: 0 8px 24px rgba(15, 23, 42, 0.12);
 
+//mapにないkeyはエラーにする
 @function _get($map, $key, $label) {
   @if map.has-key($map, $key) {
     @return map.get($map, $key);
   }
+
   @error "Unknown #{$label} key: #{$key}. Allowed: #{map.keys($map)}";
 }
 
-//mapにないkeyはエラーにする
-@function space($key) { @return _get($spaces, $key, "space"); }
-@function font-size($key) { @return _get($font-sizes, $key, "font-size"); }
-@function font-size-sp($key) { @return _get($font-sizes-sp, $key, "font-size-sp"); }
-@function color($key) { @return _get($colors, $key, "color"); }
-@function line-height($key) { @return _get($line-heights, $key, "line-height"); }
-@function font-weight($key) { @return _get($font-weights, $key, "font-weight"); }
-@function radius($key) { @return _get($radii, $key, "radius"); }
-@function container($key) { @return _get($containers, $key, "container"); }
+@function space($key) {
+  @return _get($spaces, $key, 'space');
+}
+
+@function font-size($key) {
+  @return _get($font-sizes, $key, 'font-size');
+}
+
+@function font-size-sp($key) {
+  @return _get($font-sizes-sp, $key, 'font-size-sp');
+}
+
+@function color($key) {
+  @return _get($colors, $key, 'color');
+}
+
+@function line-height($key) {
+  @return _get($line-heights, $key, 'line-height');
+}
+
+@function font-weight($key) {
+  @return _get($font-weights, $key, 'font-weight');
+}
+
+@function radius($key) {
+  @return _get($radii, $key, 'radius');
+}
+
+@function container($key) {
+  @return _get($containers, $key, 'container');
+}

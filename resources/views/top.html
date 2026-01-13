@@ -1,153 +1,169 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ほいくjobサーチ | Top</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700&family=Shippori+Mincho+B1:wght@600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../../public/css/top.css" />
-</head>
-<body class="top">
-  <header class="top-header">
-    <div class="top-header__inner">
-      <div class="top-logo">ほいくjobサーチ</div>
-      <nav class="top-nav">
-        <a class="top-nav__link" href="./job-search.html">求人検索</a>
-        <a class="top-nav__link" href="#feature">特集</a>
-        <a class="top-nav__link" href="#support">サポート</a>
-        <a class="top-nav__link" href="#flow">転職の流れ</a>
-      </nav>
-      <div class="top-header__actions">
-        <button class="button button--ghost" type="button">会員登録</button>
-        <button class="button button--primary" type="button">求人を探す</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ほいくjobサーチ | Top</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700&family=Shippori+Mincho+B1:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../public/css/top.css" />
+  </head>
+  <body class="top">
+    <header class="top-header">
+      <div class="top-header__inner">
+        <div class="top-logo">ほいくjobサーチ</div>
+        <nav class="top-nav">
+          <a class="top-nav__link" href="./job-search.html">求人検索</a>
+          <a class="top-nav__link" href="#feature">特集</a>
+          <a class="top-nav__link" href="#support">サポート</a>
+          <a class="top-nav__link" href="#flow">転職の流れ</a>
+        </nav>
+        <div class="top-header__actions">
+          <button class="button button--ghost" type="button">会員登録</button>
+          <button class="button button--primary" type="button">求人を探す</button>
+        </div>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <main class="top-main">
-    <section class="top-hero">
-      <div class="container container--narrow">
-        <div class="top-hero__content">
-          <p class="top-hero__eyebrow">保育士の転職を、やさしく・確実に。</p>
-          <h1 class="top-hero__title">園の雰囲気が見える。だから、長く働ける。</h1>
-        <p class="top-hero__lead">写真・口コミ・面談レポートで、働く前に“空気感”まで分かる求人サイトです。</p>
-        <div class="top-hero__stats">
-          <div class="top-stat-card">
-            <p class="top-stat-card__value">4,800+</p>
-              <p class="top-stat-card__label">掲載園数</p>
-            </div>
-            <div class="top-stat-card">
-              <p class="top-stat-card__value">96%</p>
-              <p class="top-stat-card__label">転職満足度</p>
-            </div>
-            <div class="top-stat-card">
-              <p class="top-stat-card__value">最短2日</p>
-              <p class="top-stat-card__label">内定まで</p>
+    <main class="top-main">
+      <section class="top-hero">
+        <div class="container container--narrow">
+          <div class="top-hero__content">
+            <p class="top-hero__eyebrow">保育士の転職を、やさしく・確実に。</p>
+            <h1 class="top-hero__title">園の雰囲気が見える。だから、長く働ける。</h1>
+            <p class="top-hero__lead">
+              写真・口コミ・面談レポートで、働く前に“空気感”まで分かる求人サイトです。
+            </p>
+            <div class="top-hero__stats">
+              <div class="top-stat-card">
+                <p class="top-stat-card__value">4,800+</p>
+                <p class="top-stat-card__label">掲載園数</p>
+              </div>
+              <div class="top-stat-card">
+                <p class="top-stat-card__value">96%</p>
+                <p class="top-stat-card__label">転職満足度</p>
+              </div>
+              <div class="top-stat-card">
+                <p class="top-stat-card__value">最短2日</p>
+                <p class="top-stat-card__label">内定まで</p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="top-hero-actions">
-      <div class="container">
-        <button class="button button--primary" type="button">条件から探す</button>
-        <button class="button button--light" type="button">相談して探す</button>
-      </div>
-    </section>
-
-    <section class="top-search" id="search">
-      <div class="container container--narrow">
-        <!-- include: ../compornents/search-ui.html -->
-        <section class="search-ui">
-          <h2 class="search-ui__title">かんたん求人検索</h2>
-          <p class="search-ui__note">希望条件を入力すると、おすすめがすぐに表示されます。</p>
-          <form class="search-ui__form">
-            <label class="search-ui__field">
-              <span class="search-ui__label">勤務地</span>
-              <select class="search-ui__select" name="area">
-                <option value="" selected disabled>勤務地を選ぶ</option>
-                <option>東京都</option>
-                <option>神奈川県</option>
-                <option>埼玉県</option>
-                <option>千葉県</option>
-              </select>
-            </label>
-            <label class="search-ui__field">
-              <span class="search-ui__label">雇用形態</span>
-              <select class="search-ui__select" name="employment">
-                <option value="" selected disabled>雇用形態を選ぶ</option>
-                <option>正社員</option>
-                <option>パート・アルバイト</option>
-                <option>派遣</option>
-                <option>契約社員</option>
-              </select>
-            </label>
-            <label class="search-ui__field">
-              <span class="search-ui__label">施設形態</span>
-              <select class="search-ui__select" name="facility">
-                <option value="" selected disabled>施設形態を選ぶ</option>
-                <option>認可保育園</option>
-                <option>認定こども園</option>
-                <option>小規模保育</option>
-                <option>企業内保育</option>
-              </select>
-            </label>
-            <label class="search-ui__field">
-              <span class="search-ui__label">給料</span>
-              <select class="search-ui__select" name="salary">
-                <option value="" selected disabled>給料を選ぶ</option>
-                <option>月給20万円以上</option>
-                <option>月給23万円以上</option>
-                <option>月給26万円以上</option>
-                <option>月給30万円以上</option>
-              </select>
-            </label>
-            <label class="search-ui__field search-ui__field--full">
-              <span class="search-ui__label">フリーワード</span>
-              <input class="search-ui__input search-ui__input--full" type="text" name="keyword" placeholder="例：東京 / 認可保育園 / 駅チカ" />
-            </label>
-            <div class="search-ui__actions">
-              <button class="search-ui__button button button--primary" type="submit">検索する</button>
-              <button class="search-ui__button button button--ghost" type="button">条件をクリア</button>
-            </div>
-          </form>
-        </section>
-      </div>
-    </section>
-
-    <section class="top-highlight" id="feature">
-      <div class="container">
-        <div class="top-section__header">
-          <h2 class="top-section__title">人気の求人特集</h2>
-          <p class="top-section__lead">働き方・条件・園の特色から、今注目されている求人を厳選。</p>
+      <section class="top-hero-actions">
+        <div class="container">
+          <button class="button button--primary" type="button">条件から探す</button>
+          <button class="button button--light" type="button">相談して探す</button>
         </div>
-        <div class="top-highlight__grid">
-          <article class="top-highlight__card">
-            <p class="top-highlight__badge">駅チカ</p>
-            <h3 class="top-highlight__title">通勤ストレスを減らす園</h3>
-            <p class="top-highlight__text">徒歩5分圏内の園で、残業も少ない求人を集めました。</p>
-            <p class="top-highlight__meta">120件の求人</p>
-          </article>
-          <article class="top-highlight__card">
-            <p class="top-highlight__badge top-highlight__badge--pink">小規模園</p>
-            <h3 class="top-highlight__title">一人ひとりと向き合える</h3>
-            <p class="top-highlight__text">0〜2歳中心の園で、じっくり保育したい方に。</p>
-            <p class="top-highlight__meta">86件の求人</p>
-          </article>
-          <article class="top-highlight__card">
-            <p class="top-highlight__badge top-highlight__badge--yellow">高待遇</p>
-            <h3 class="top-highlight__title">年収アップを目指せる</h3>
-            <p class="top-highlight__text">月給28万円以上・賞与充実の求人をピックアップ。</p>
-            <p class="top-highlight__meta">65件の求人</p>
-          </article>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- <section class="top-support" id="support">
+      <section class="top-search" id="search">
+        <div class="container container--narrow">
+          <!-- include: ../compornents/search-ui.html -->
+          <section class="search-ui">
+            <h2 class="search-ui__title">かんたん求人検索</h2>
+            <p class="search-ui__note">希望条件を入力すると、おすすめがすぐに表示されます。</p>
+            <form class="search-ui__form">
+              <label class="search-ui__field">
+                <span class="search-ui__label">勤務地</span>
+                <select class="search-ui__select" name="area">
+                  <option value="" selected disabled>勤務地を選ぶ</option>
+                  <option>東京都</option>
+                  <option>神奈川県</option>
+                  <option>埼玉県</option>
+                  <option>千葉県</option>
+                </select>
+              </label>
+              <label class="search-ui__field">
+                <span class="search-ui__label">雇用形態</span>
+                <select class="search-ui__select" name="employment">
+                  <option value="" selected disabled>雇用形態を選ぶ</option>
+                  <option>正社員</option>
+                  <option>パート・アルバイト</option>
+                  <option>派遣</option>
+                  <option>契約社員</option>
+                </select>
+              </label>
+              <label class="search-ui__field">
+                <span class="search-ui__label">施設形態</span>
+                <select class="search-ui__select" name="facility">
+                  <option value="" selected disabled>施設形態を選ぶ</option>
+                  <option>認可保育園</option>
+                  <option>認定こども園</option>
+                  <option>小規模保育</option>
+                  <option>企業内保育</option>
+                </select>
+              </label>
+              <label class="search-ui__field">
+                <span class="search-ui__label">給料</span>
+                <select class="search-ui__select" name="salary">
+                  <option value="" selected disabled>給料を選ぶ</option>
+                  <option>月給20万円以上</option>
+                  <option>月給23万円以上</option>
+                  <option>月給26万円以上</option>
+                  <option>月給30万円以上</option>
+                </select>
+              </label>
+              <label class="search-ui__field search-ui__field--full">
+                <span class="search-ui__label">フリーワード</span>
+                <input
+                  class="search-ui__input search-ui__input--full"
+                  type="text"
+                  name="keyword"
+                  placeholder="例：東京 / 認可保育園 / 駅チカ"
+                />
+              </label>
+              <div class="search-ui__actions">
+                <button class="search-ui__button button button--primary" type="submit">
+                  検索する
+                </button>
+                <button class="search-ui__button button button--ghost" type="button">
+                  条件をクリア
+                </button>
+              </div>
+            </form>
+          </section>
+        </div>
+      </section>
+
+      <section class="top-highlight" id="feature">
+        <div class="container">
+          <div class="top-section__header">
+            <h2 class="top-section__title">人気の求人特集</h2>
+            <p class="top-section__lead">
+              働き方・条件・園の特色から、今注目されている求人を厳選。
+            </p>
+          </div>
+          <div class="top-highlight__grid">
+            <article class="top-highlight__card">
+              <p class="top-highlight__badge">駅チカ</p>
+              <h3 class="top-highlight__title">通勤ストレスを減らす園</h3>
+              <p class="top-highlight__text">徒歩5分圏内の園で、残業も少ない求人を集めました。</p>
+              <p class="top-highlight__meta">120件の求人</p>
+            </article>
+            <article class="top-highlight__card">
+              <p class="top-highlight__badge top-highlight__badge--pink">小規模園</p>
+              <h3 class="top-highlight__title">一人ひとりと向き合える</h3>
+              <p class="top-highlight__text">0〜2歳中心の園で、じっくり保育したい方に。</p>
+              <p class="top-highlight__meta">86件の求人</p>
+            </article>
+            <article class="top-highlight__card">
+              <p class="top-highlight__badge top-highlight__badge--yellow">高待遇</p>
+              <h3 class="top-highlight__title">年収アップを目指せる</h3>
+              <p class="top-highlight__text">月給28万円以上・賞与充実の求人をピックアップ。</p>
+              <p class="top-highlight__meta">65件の求人</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- <section class="top-support" id="support">
       <div class="container">
         <div class="top-support__content">
           <p class="top-support__eyebrow">専任アドバイザーが伴走</p>
@@ -187,7 +203,7 @@
       </div>
     </section> -->
 
-    <!-- <section class="top-flow" id="flow">
+      <!-- <section class="top-flow" id="flow">
       <div class="container">
         <div class="top-section__header">
           <h2 class="top-section__title">転職までの流れ</h2>
@@ -218,67 +234,69 @@
       </div>
     </section> -->
 
-    <section class="top-reason">
-      <div class="container">
-        <div class="top-section__header">
-          <h2 class="top-section__title">選ばれる理由</h2>
-          <p class="top-section__lead">求人の質・情報量・サポート体制が違います。</p>
+      <section class="top-reason">
+        <div class="container">
+          <div class="top-section__header">
+            <h2 class="top-section__title">選ばれる理由</h2>
+            <p class="top-section__lead">求人の質・情報量・サポート体制が違います。</p>
+          </div>
+          <div class="top-reason__grid">
+            <article class="top-reason__card">
+              <h3 class="top-reason__title">園のリアルが分かる</h3>
+              <p class="top-reason__text">
+                見学レポート・写真・口コミで、働く前に園の空気感を把握。
+              </p>
+            </article>
+            <article class="top-reason__card">
+              <h3 class="top-reason__title">求人の透明性</h3>
+              <p class="top-reason__text">残業時間・休暇制度・配置人数まで明記。</p>
+            </article>
+            <article class="top-reason__card">
+              <h3 class="top-reason__title">保育士専任チーム</h3>
+              <p class="top-reason__text">業界経験のあるアドバイザーがあなたに合う園を提案。</p>
+            </article>
+          </div>
         </div>
-        <div class="top-reason__grid">
-          <article class="top-reason__card">
-            <h3 class="top-reason__title">園のリアルが分かる</h3>
-            <p class="top-reason__text">見学レポート・写真・口コミで、働く前に園の空気感を把握。</p>
-          </article>
-          <article class="top-reason__card">
-            <h3 class="top-reason__title">求人の透明性</h3>
-            <p class="top-reason__text">残業時間・休暇制度・配置人数まで明記。</p>
-          </article>
-          <article class="top-reason__card">
-            <h3 class="top-reason__title">保育士専任チーム</h3>
-            <p class="top-reason__text">業界経験のあるアドバイザーがあなたに合う園を提案。</p>
-          </article>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="top-faq">
-      <div class="container">
-        <div class="top-section__header">
-          <h2 class="top-section__title">よくある質問</h2>
-          <p class="top-section__lead">登録や転職活動の疑問にお答えします。</p>
+      <section class="top-faq">
+        <div class="container">
+          <div class="top-section__header">
+            <h2 class="top-section__title">よくある質問</h2>
+            <p class="top-section__lead">登録や転職活動の疑問にお答えします。</p>
+          </div>
+          <div class="top-faq__list">
+            <details class="top-faq__item">
+              <summary>登録や相談は本当に無料ですか？</summary>
+              <p>求人企業からの手数料で運営しているため、求職者の方は無料で利用できます。</p>
+            </details>
+            <details class="top-faq__item">
+              <summary>今すぐ転職しなくても相談できますか？</summary>
+              <p>はい。転職時期が未定でも、情報収集や条件整理のためにご相談いただけます。</p>
+            </details>
+            <details class="top-faq__item">
+              <summary>非公開求人も紹介してもらえますか？</summary>
+              <p>公開求人に加え、園からの依頼で非公開の求人もご案内できます。</p>
+            </details>
+          </div>
         </div>
-        <div class="top-faq__list">
-          <details class="top-faq__item">
-            <summary>登録や相談は本当に無料ですか？</summary>
-            <p>求人企業からの手数料で運営しているため、求職者の方は無料で利用できます。</p>
-          </details>
-          <details class="top-faq__item">
-            <summary>今すぐ転職しなくても相談できますか？</summary>
-            <p>はい。転職時期が未定でも、情報収集や条件整理のためにご相談いただけます。</p>
-          </details>
-          <details class="top-faq__item">
-            <summary>非公開求人も紹介してもらえますか？</summary>
-            <p>公開求人に加え、園からの依頼で非公開の求人もご案内できます。</p>
-          </details>
-        </div>
-      </div>
-    </section>
-  </main>
+      </section>
+    </main>
 
-  <footer class="top-footer">
-    <div class="top-footer__inner">
-      <div>
-      <p class="top-logo">ほいくjobサーチ</p>
-        <p class="top-footer__text">保育士のための求人検索・転職サポート</p>
+    <footer class="top-footer">
+      <div class="top-footer__inner">
+        <div>
+          <p class="top-logo">ほいくjobサーチ</p>
+          <p class="top-footer__text">保育士のための求人検索・転職サポート</p>
+        </div>
+        <div class="top-footer__links">
+          <a href="./job-search.html">求人検索</a>
+          <a href="#feature">特集</a>
+          <a href="#support">サポート</a>
+          <a href="#flow">転職の流れ</a>
+        </div>
+        <p class="top-footer__copy">© 2024 hoikujob Search. All rights reserved.</p>
       </div>
-      <div class="top-footer__links">
-        <a href="./job-search.html">求人検索</a>
-        <a href="#feature">特集</a>
-        <a href="#support">サポート</a>
-        <a href="#flow">転職の流れ</a>
-      </div>
-      <p class="top-footer__copy">© 2024 hoikujob Search. All rights reserved.</p>
-    </div>
-  </footer>
-</body>
+    </footer>
+  </body>
 </html>

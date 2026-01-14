@@ -19,13 +19,9 @@
 .job-search {
   width: 100%;
   margin: 0;
-  padding: settings.space(32) 0 settings.space(64);
+  padding: 0;
   display: grid;
   gap: settings.space(40);
-
-  @include mixin.mq(lg) {
-    padding: settings.space(48) 0 settings.space(64);
-  }
 }
 
 // ヒーロー + 検索
@@ -36,9 +32,9 @@
     settings.color(primary-soft) 60%,
     settings.color(accent-soft) 100%
   );
-  border-radius: settings.radius(16);
   padding: settings.space(32);
-  border: 1px solid settings.color(border);
+  border: 0;
+  border-radius: 0;
 
   &__inner {
     display: grid;
@@ -80,11 +76,6 @@
     display: flex;
     flex-wrap: wrap;
     gap: settings.space(8);
-  }
-
-  &__search {
-    @include mixin.card;
-    background: settings.color(card);
   }
 }
 

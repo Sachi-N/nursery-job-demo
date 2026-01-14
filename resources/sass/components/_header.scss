@@ -2,8 +2,7 @@
 @use '../base/mixin' as mixin;
 
 // 共通ヘッダー
-.top-header,
-.job-search-header {
+.site-header {
   position: sticky;
   top: 0;
   z-index: 10;
@@ -12,8 +11,7 @@
   border-bottom: 1px solid settings.color(border);
 }
 
-.top-header__inner,
-.job-search-header__inner {
+.site-header__inner {
   max-width: 1180px;
   margin: 0 auto;
   padding: settings.space(16) settings.space(20);
@@ -22,15 +20,13 @@
   gap: settings.space(16);
 }
 
-.top-header__actions,
-.job-search-header__actions {
+.site-header__actions {
   display: flex;
   align-items: center;
   gap: settings.space(12);
 }
 
-.top-logo,
-.job-search-logo {
+.site-logo {
   font-family: settings.$font-family-rounded;
   font-size: settings.font-size(xl);
   font-weight: settings.font-weight(bold);
@@ -41,8 +37,7 @@
   margin-right: auto;
 }
 
-.top-nav,
-.job-search-nav {
+.site-nav {
   display: none;
   gap: settings.space(20);
   font-size: settings.font-size(sm);

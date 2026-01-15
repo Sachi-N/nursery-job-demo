@@ -1,0 +1,556 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Styleguide</title>
+    <link rel="stylesheet" href="../../public/css/index.css" />
+    <style>
+      .guide {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 2.5rem 2rem;
+      }
+
+      .section {
+        margin-bottom: 2.5rem;
+      }
+
+      .section h2 {
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+      }
+
+      .swatch_grid {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      }
+
+      .swatch {
+        border-radius: 12px;
+        padding: 1rem;
+        color: #0f172a;
+        border: 1px solid #e2e8f0;
+        box-shadow: 0 8px 20px rgba(15, 23, 42, 0.1);
+      }
+
+      .swatch strong {
+        display: block;
+        margin-bottom: 0.25rem;
+        font-size: 0.95rem;
+      }
+
+      .swatch span {
+        font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+        font-size: 0.8rem;
+      }
+
+      .label {
+        font-size: 0.9rem;
+        color: #52606d;
+        margin-bottom: 0.75rem;
+      }
+
+      .space_grid,
+      .size_grid {
+        display: grid;
+        gap: 1rem;
+      }
+
+      .space_grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      }
+
+      .space_sample {
+        border: 1px dashed #cbd2d9;
+        border-radius: 10px;
+        padding: 1rem;
+        background: #f8fafc;
+      }
+
+      .space_box {
+        height: 16px;
+        background: #3fbad8;
+        border-radius: 999px;
+      }
+
+      .size_grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      }
+
+      .size_row {
+        border: 1px solid #e2e8f0;
+        border-radius: 10px;
+        padding: 1rem;
+        background: #ffffff;
+      }
+
+      .size_row p {
+        margin: 0.35rem 0 0;
+        color: #1f2933;
+      }
+
+      .token_list {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      }
+
+      .token_card {
+        border: 1px solid #e2e8f0;
+        border-radius: 12px;
+        padding: 1rem;
+        background: #ffffff;
+      }
+
+      .token_card strong {
+        display: block;
+        font-size: 0.95rem;
+        margin-bottom: 0.4rem;
+      }
+
+      .token_card span {
+        color: #52606d;
+        font-size: 0.85rem;
+      }
+
+      .token_sample {
+        margin-top: 0.75rem;
+        padding: 0.75rem;
+        border-radius: 10px;
+        background: #f8fafc;
+      }
+
+      .radius_grid,
+      .shadow_grid {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      }
+
+      .radius_sample,
+      .shadow_sample {
+        border: 1px solid #e2e8f0;
+        padding: 1rem;
+        background: #ffffff;
+      }
+
+      .radius_box,
+      .shadow_box {
+        height: 60px;
+        background: #e6f6fb;
+      }
+
+      .container_demo {
+        border: 1px dashed #cbd2d9;
+        border-radius: 12px;
+        padding: 1rem;
+        background: #f8fafc;
+      }
+
+      .container_demo_inner {
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
+        padding: 0.75rem;
+        border-radius: 10px;
+      }
+
+      .parts_grid {
+        display: grid;
+        gap: 1.5rem;
+      }
+
+      .parts_card {
+        border: 1px solid #e2e8f0;
+        border-radius: 16px;
+        padding: 1.5rem;
+        background: #ffffff;
+      }
+
+      .parts_row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+      }
+
+      .font_sample {
+        font-size: 1.1rem;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="guide">
+      <header class="section">
+        <h1>Color Palette</h1>
+        <p class="label">保育士向け求人プロダクトの配色サンプル</p>
+      </header>
+
+      <section class="section">
+        <h2>Blue</h2>
+        <div class="swatch_grid">
+          <div class="swatch" style="background: #e6f6fb">
+            <strong>Blue 100</strong>
+            <span>$color-blue-100</span>
+          </div>
+          <div class="swatch" style="background: #bfe8f5">
+            <strong>Blue 200</strong>
+            <span>$color-blue-200</span>
+          </div>
+          <div class="swatch" style="background: #80d3ea">
+            <strong>Blue 300</strong>
+            <span>$color-blue-300</span>
+          </div>
+          <div class="swatch" style="background: #3fbad8; color: #fff">
+            <strong>Blue 400</strong>
+            <span>$color-blue-400</span>
+          </div>
+          <div class="swatch" style="background: #1b9bbf; color: #fff">
+            <strong>Blue 500</strong>
+            <span>$color-blue-500</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Pink</h2>
+        <div class="swatch_grid">
+          <div class="swatch" style="background: #fde8f2">
+            <strong>Pink 100</strong>
+            <span>$color-pink-100</span>
+          </div>
+          <div class="swatch" style="background: #fbc6df">
+            <strong>Pink 200</strong>
+            <span>$color-pink-200</span>
+          </div>
+          <div class="swatch" style="background: #f596c2">
+            <strong>Pink 300</strong>
+            <span>$color-pink-300</span>
+          </div>
+          <div class="swatch" style="background: #e764a3; color: #fff">
+            <strong>Pink 400</strong>
+            <span>$color-pink-400</span>
+          </div>
+          <div class="swatch" style="background: #cf3f85; color: #fff">
+            <strong>Pink 500</strong>
+            <span>$color-pink-500</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Yellow</h2>
+        <div class="swatch_grid">
+          <div class="swatch" style="background: #fff7d6">
+            <strong>Yellow 100</strong>
+            <span>$color-yellow-100</span>
+          </div>
+          <div class="swatch" style="background: #ffecad">
+            <strong>Yellow 200</strong>
+            <span>$color-yellow-200</span>
+          </div>
+          <div class="swatch" style="background: #ffd778">
+            <strong>Yellow 300</strong>
+            <span>$color-yellow-300</span>
+          </div>
+          <div class="swatch" style="background: #f7be3f">
+            <strong>Yellow 400</strong>
+            <span>$color-yellow-400</span>
+          </div>
+          <div class="swatch" style="background: #e39a18; color: #fff">
+            <strong>Yellow 500</strong>
+            <span>$color-yellow-500</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Gray</h2>
+        <div class="swatch_grid">
+          <div class="swatch" style="background: #f5f7fa">
+            <strong>Gray 100</strong>
+            <span>$color-gray-100</span>
+          </div>
+          <div class="swatch" style="background: #e4e7eb">
+            <strong>Gray 200</strong>
+            <span>$color-gray-200</span>
+          </div>
+          <div class="swatch" style="background: #cbd2d9">
+            <strong>Gray 300</strong>
+            <span>$color-gray-300</span>
+          </div>
+          <div class="swatch" style="background: #9aa5b1; color: #fff">
+            <strong>Gray 400</strong>
+            <span>$color-gray-400</span>
+          </div>
+          <div class="swatch" style="background: #616e7c; color: #fff">
+            <strong>Gray 500</strong>
+            <span>$color-gray-500</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Green</h2>
+        <div class="swatch_grid">
+          <div class="swatch" style="background: #e6f9ef">
+            <strong>Green 100</strong>
+            <span>$color-green-100</span>
+          </div>
+          <div class="swatch" style="background: #c3f0d7">
+            <strong>Green 200</strong>
+            <span>$color-green-200</span>
+          </div>
+          <div class="swatch" style="background: #8ddfba">
+            <strong>Green 300</strong>
+            <span>$color-green-300</span>
+          </div>
+          <div class="swatch" style="background: #52c796; color: #fff">
+            <strong>Green 400</strong>
+            <span>$color-green-400</span>
+          </div>
+          <div class="swatch" style="background: #2f9f73; color: #fff">
+            <strong>Green 500</strong>
+            <span>$color-green-500</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Spacing</h2>
+        <div class="space_grid">
+          <div class="space_sample">
+            <strong>$space-4</strong>
+            <div class="space_box" style="width: 4px"></div>
+          </div>
+          <div class="space_sample">
+            <strong>$space-8</strong>
+            <div class="space_box" style="width: 8px"></div>
+          </div>
+          <div class="space_sample">
+            <strong>$space-16</strong>
+            <div class="space_box" style="width: 16px"></div>
+          </div>
+          <div class="space_sample">
+            <strong>$space-24</strong>
+            <div class="space_box" style="width: 24px"></div>
+          </div>
+          <div class="space_sample">
+            <strong>$space-32</strong>
+            <div class="space_box" style="width: 32px"></div>
+          </div>
+          <div class="space_sample">
+            <strong>$space-40</strong>
+            <div class="space_box" style="width: 40px"></div>
+          </div>
+          <div class="space_sample">
+            <strong>$space-48</strong>
+            <div class="space_box" style="width: 48px"></div>
+          </div>
+          <div class="space_sample">
+            <strong>$space-56</strong>
+            <div class="space_box" style="width: 56px"></div>
+          </div>
+          <div class="space_sample">
+            <strong>$space-64</strong>
+            <div class="space_box" style="width: 64px"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Font Sizes</h2>
+        <div class="size_grid">
+          <div class="size_row">
+            <strong>Desktop</strong>
+            <p style="font-size: 12px">$font-size-12 (12px)</p>
+            <p style="font-size: 14px">$font-size-14 (14px)</p>
+            <p style="font-size: 16px">$font-size-16 (16px)</p>
+            <p style="font-size: 18px">$font-size-18 (18px)</p>
+            <p style="font-size: 20px">$font-size-20 (20px)</p>
+            <p style="font-size: 24px">$font-size-24 (24px)</p>
+            <p style="font-size: 28px">$font-size-28 (28px)</p>
+            <p style="font-size: 32px">$font-size-32 (32px)</p>
+          </div>
+          <div class="size_row">
+            <strong>SP</strong>
+            <p style="font-size: 12px">$font-size-12-sp (12px)</p>
+            <p style="font-size: 14px">$font-size-14-sp (14px)</p>
+            <p style="font-size: 16px">$font-size-16-sp (16px)</p>
+            <p style="font-size: 18px">$font-size-18-sp (18px)</p>
+            <p style="font-size: 20px">$font-size-20-sp (20px)</p>
+            <p style="font-size: 24px">$font-size-24-sp (24px)</p>
+            <p style="font-size: 28px">$font-size-28-sp (28px)</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Typography</h2>
+        <div class="token_list">
+          <div class="token_card">
+            <strong>Rounded</strong>
+            <span>$font-family-rounded</span>
+            <div class="token_sample">
+              <p class="font_sample" style="font-family: 'M PLUS Rounded 1c', 'Noto Sans JP', sans-serif">
+                ほいくjobサーチ / Nursery job search
+              </p>
+            </div>
+          </div>
+          <div class="token_card">
+            <strong>Sans</strong>
+            <span>$font-family-sans</span>
+            <div class="token_sample">
+              <p class="font_sample" style="font-family: 'Noto Sans JP', sans-serif">
+                ほいくjobサーチ / Nursery job search
+              </p>
+            </div>
+          </div>
+          <div class="token_card">
+            <strong>Mono</strong>
+            <span>$font-family-mono</span>
+            <div class="token_sample">
+              <p class="font_sample" style="font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, monospace">
+                0123456789 ABCDEFG
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Weights & Line Height</h2>
+        <div class="token_list">
+          <div class="token_card">
+            <strong>Weights</strong>
+            <span>$font-weight-regular / medium / bold</span>
+            <div class="token_sample">
+              <p class="font_sample" style="font-weight: 400">Regular 400</p>
+              <p class="font_sample" style="font-weight: 500">Medium 500</p>
+              <p class="font_sample" style="font-weight: 700">Bold 700</p>
+            </div>
+          </div>
+          <div class="token_card">
+            <strong>Line Height</strong>
+            <span>$line-height-tight / base / loose</span>
+            <div class="token_sample">
+              <p style="line-height: 1.2; margin: 0">Tight line height sample.</p>
+              <p style="line-height: 1.6; margin: 0">Base line height sample.</p>
+              <p style="line-height: 1.8; margin: 0">Loose line height sample.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Radius</h2>
+        <div class="radius_grid">
+          <div class="radius_sample">
+            <strong>$radius-4</strong>
+            <div class="radius_box" style="border-radius: 4px"></div>
+          </div>
+          <div class="radius_sample">
+            <strong>$radius-8</strong>
+            <div class="radius_box" style="border-radius: 8px"></div>
+          </div>
+          <div class="radius_sample">
+            <strong>$radius-12</strong>
+            <div class="radius_box" style="border-radius: 12px"></div>
+          </div>
+          <div class="radius_sample">
+            <strong>$radius-16</strong>
+            <div class="radius_box" style="border-radius: 16px"></div>
+          </div>
+          <div class="radius_sample">
+            <strong>$radius-full</strong>
+            <div class="radius_box" style="border-radius: 9999px"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Shadow</h2>
+        <div class="shadow_grid">
+          <div class="shadow_sample">
+            <strong>$shadow-sm</strong>
+            <div class="shadow_box" style="box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08)"></div>
+          </div>
+          <div class="shadow_sample">
+            <strong>$shadow-md</strong>
+            <div class="shadow_box" style="box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12)"></div>
+          </div>
+          <div class="shadow_sample">
+            <strong>$shadow-md (card)</strong>
+            <div class="shadow_box" style="box-shadow: 0 8px 24px rgba(15, 23, 42, 0.12)"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Containers</h2>
+        <div class="space_grid">
+          <div class="container_demo">
+            <strong>.container</strong>
+            <div class="container_demo_inner">max-width: 1180px</div>
+          </div>
+          <div class="container_demo">
+            <strong>.container.is_narrow</strong>
+            <div class="container_demo_inner">max-width: 960px</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Parts</h2>
+        <div class="parts_grid">
+          <div class="parts_card">
+            <p class="label">Buttons</p>
+            <div class="parts_row">
+              <button class="p_button is_primary" type="button">Primary</button>
+              <button class="p_button is_ghost" type="button">Ghost</button>
+              <button class="p_button is_light" type="button">Light</button>
+              <button class="p_button is_dark" type="button">Dark</button>
+            </div>
+          </div>
+          <div class="parts_card">
+            <p class="label">Search UI</p>
+            <section class="c_search">
+              <h3 class="c_search_title">かんたん求人検索</h3>
+              <p class="c_search_note">希望条件を入力すると、おすすめがすぐに表示されます。</p>
+              <form class="c_search_form">
+                <label class="c_search_field">
+                  <span class="c_search_label">勤務地</span>
+                  <select class="c_search_select" name="area">
+                    <option>東京都</option>
+                    <option>神奈川県</option>
+                  </select>
+                </label>
+                <label class="c_search_field">
+                  <span class="c_search_label">雇用形態</span>
+                  <select class="c_search_select" name="employment">
+                    <option>正社員</option>
+                    <option>パート</option>
+                  </select>
+                </label>
+                <label class="c_search_field is_full">
+                  <span class="c_search_label">フリーワード</span>
+                  <input
+                    class="c_search_input is_full"
+                    type="text"
+                    name="keyword"
+                    placeholder="例：東京 / 認可保育園 / 駅チカ"
+                  />
+                </label>
+                <div class="c_search_actions">
+                  <button class="c_search_button p_button is_primary" type="submit">検索する</button>
+                  <button class="c_search_button p_button is_ghost" type="button">条件をクリア</button>
+                </div>
+              </form>
+            </section>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

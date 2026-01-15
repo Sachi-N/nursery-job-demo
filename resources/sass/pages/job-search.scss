@@ -1,13 +1,8 @@
 @use '../base/settings' as settings;
 @use '../base/mixin' as mixin;
-@use '../components/search-ui';
-@use '../components/header';
-@use '../components/footer';
-@use '../components/container';
-@use '../components/button';
 
 // ページ共通
-.job-search-page {
+.job_search_page {
   background: settings.color(canvas);
   color: settings.color(ink);
   font-family: settings.$font-family-rounded;
@@ -16,7 +11,7 @@
 // ボタン
 
 // メインレイアウト
-.job-search {
+.job_search {
   width: 100%;
   margin: 0;
   padding: 0;
@@ -25,7 +20,7 @@
 }
 
 // ヒーロー + 検索
-.job-search-hero {
+.job_search_hero {
   background: linear-gradient(
     135deg,
     settings.color(card) 0%,
@@ -36,7 +31,7 @@
   border: 0;
   border-radius: 0;
 
-  &__inner {
+  &_inner {
     display: grid;
     gap: settings.space(24);
 
@@ -45,12 +40,12 @@
     }
   }
 
-  &__content {
+  &_content {
     display: grid;
     gap: settings.space(16);
   }
 
-  &__eyebrow {
+  &_eyebrow {
     display: inline-flex;
     padding: settings.space(8) settings.space(16);
     border-radius: settings.radius(9999);
@@ -60,26 +55,26 @@
     margin: 0;
   }
 
-  &__title {
+  &_title {
     font-size: settings.font-size(title-lg);
     line-height: settings.line-height(tight);
     margin: 0;
   }
 
-  &__lead {
+  &_lead {
     margin: 0;
     color: settings.color(ink-muted);
     font-size: settings.font-size(md);
   }
 
-  &__chips {
+  &_chips {
     display: flex;
     flex-wrap: wrap;
     gap: settings.space(8);
   }
 }
 
-.job-search-chip {
+.job_search_chip {
   padding: settings.space(8) settings.space(12);
   border-radius: settings.radius(9999);
   border: 1px solid settings.color(border);
@@ -88,13 +83,13 @@
 }
 
 // サマリー
-.job-search-summary {
+.job_search_summary {
   @include mixin.card;
   background: settings.color(card);
   display: grid;
   gap: settings.space(16);
 
-  &__header {
+  &_header {
     display: grid;
     gap: settings.space(12);
 
@@ -104,31 +99,31 @@
     }
   }
 
-  &__title {
+  &_title {
     margin: 0;
     font-size: settings.font-size(title-md);
   }
 
-  &__count {
+  &_count {
     margin: settings.space(4) 0 0;
     color: settings.color(ink-muted);
     font-size: settings.font-size(sm);
   }
 
-  &__sort {
+  &_sort {
     display: flex;
     flex-wrap: wrap;
     gap: settings.space(8);
     align-items: center;
   }
 
-  &__label {
+  &_label {
     font-size: settings.font-size(sm);
     color: settings.color(ink-muted);
   }
 }
 
-.job-search-pill {
+.job_search_pill {
   padding: settings.space(8) settings.space(12);
   border-radius: settings.radius(9999);
   border: 1px solid settings.color(border);
@@ -137,20 +132,20 @@
   color: settings.color(ink);
 }
 
-.job-search-filters {
+.job_search_filters {
   display: flex;
   flex-wrap: wrap;
   gap: settings.space(8);
 }
 
-.job-search-filter {
+.job_search_filter {
   padding: settings.space(8) settings.space(12);
   border-radius: settings.radius(9999);
   background: settings.color(primary-soft);
   color: settings.color(primary-strong);
   font-size: settings.font-size(xs);
 
-  &--clear {
+  &.is_clear {
     background: settings.color(card);
     border: 1px solid settings.color(border);
     color: settings.color(ink);
@@ -158,30 +153,30 @@
 }
 
 // 求人カード
-.job-search-results {
+.job_search_results {
   display: grid;
   gap: settings.space(16);
 }
 
-.job-search-card {
+.job_search_card {
   @include mixin.card;
   display: grid;
   gap: settings.space(12);
   background: settings.color(card);
 
-  &__header {
+  &_header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: settings.space(12);
   }
 
-  &__title {
+  &_title {
     margin: 0;
     font-size: settings.font-size(lg);
   }
 
-  &__badge {
+  &_badge {
     padding: settings.space(4) settings.space(12);
     border-radius: settings.radius(9999);
     background: settings.color(accent-soft);
@@ -189,18 +184,18 @@
     font-size: settings.font-size(xs);
   }
 
-  &__meta {
+  &_meta {
     margin: 0;
     color: settings.color(ink-muted);
     font-size: settings.font-size(sm);
   }
 
-  &__text {
+  &_text {
     margin: 0;
     color: settings.color(ink);
   }
 
-  &__tags {
+  &_tags {
     display: flex;
     flex-wrap: wrap;
     gap: settings.space(8);
@@ -210,21 +205,21 @@
 }
 
 // ガイド
-.job-search-guide {
+.job_search_guide {
   display: grid;
   gap: settings.space(16);
 
-  &__title {
+  &_title {
     margin: 0;
     font-size: settings.font-size(title-md);
   }
 
-  &__lead {
+  &_lead {
     margin: 0;
     color: settings.color(ink-muted);
   }
 
-  &__steps {
+  &_steps {
     display: grid;
     gap: settings.space(16);
 
@@ -246,7 +241,7 @@
     }
   }
 
-  &__step {
+  &_step {
     margin: 0;
     font-size: settings.font-size(xs);
     color: settings.color(primary-strong);
@@ -254,19 +249,19 @@
 }
 
 // サポート
-.job-search-support {
+.job_search_support {
   @include mixin.card;
   background: settings.color(card);
   display: grid;
   gap: settings.space(16);
   justify-items: start;
 
-  &__title {
+  &_title {
     margin: 0;
     font-size: settings.font-size(title-md);
   }
 
-  &__text {
+  &_text {
     margin: settings.space(8) 0 0;
     color: settings.color(ink-muted);
   }

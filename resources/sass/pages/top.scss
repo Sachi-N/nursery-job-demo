@@ -1,10 +1,5 @@
 @use '../base/settings' as settings;
 @use '../base/mixin' as mixin;
-@use '../components/search-ui';
-@use '../components/header';
-@use '../components/footer';
-@use '../components/container';
-@use '../components/button';
 
 // ヘッダー
 .top {
@@ -14,7 +9,7 @@
 }
 
 // レイアウト共通
-.top-main {
+.top_main {
   width: 100%;
   margin: 0;
   padding: settings.space(32) 0 settings.space(64);
@@ -29,7 +24,7 @@
 // ボタン
 
 // ヒーローエリア
-.top-hero {
+.top_hero {
   position: relative;
   display: grid;
   gap: settings.space(32);
@@ -73,14 +68,14 @@
     left: -60px;
   }
 
-  &__content {
+  &_content {
     position: relative;
     z-index: 1;
     max-width: 1180px;
     margin: 0 auto;
   }
 
-  &__eyebrow {
+  &_eyebrow {
     display: inline-flex;
     padding: settings.space(8) settings.space(16);
     border-radius: settings.radius(9999);
@@ -90,26 +85,26 @@
     margin: 0;
   }
 
-  &__title {
+  &_title {
     font-size: clamp(28px, 3vw, 40px);
     line-height: settings.line-height(tight);
     margin: settings.space(16) 0 0;
   }
 
-  &__lead {
+  &_lead {
     margin: settings.space(16) 0 0;
     font-size: settings.font-size(lg);
     color: settings.color(ink-muted);
   }
 
-  &__tags {
+  &_tags {
     display: flex;
     flex-wrap: wrap;
     gap: settings.space(8);
     margin: settings.space(20) 0 0;
   }
 
-  &__stats {
+  &_stats {
     display: grid;
     gap: settings.space(12);
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -120,7 +115,7 @@
 // タグ・統計
 
 // メインボタンエリア
-.top-hero-actions {
+.top_hero_actions {
   .container {
     display: flex;
     flex-wrap: wrap;
@@ -129,18 +124,18 @@
   }
 }
 
-.top-stat-card {
+.top_stat_card {
   background: settings.color(card);
   border-radius: settings.radius(12);
   padding: settings.space(16);
   border: 1px solid settings.color(border);
 
-  &__value {
+  &_value {
     font-size: settings.font-size(title-md);
     margin: 0 0 settings.space(8);
   }
 
-  &__label {
+  &_label {
     margin: 0;
     font-size: settings.font-size(xs);
     color: settings.color(ink-muted);
@@ -148,28 +143,28 @@
 }
 
 // 検索エリア
-.top-search {
+.top_search {
   // @include mixin.card;
   // background: settings.color(card);
 }
 
-.search-ui {
+.c_search {
   margin-top: settings.space(20);
 }
 
 // セクション見出し
-.top-section {
-  &__header {
+.top_section {
+  &_header {
     display: grid;
     gap: settings.space(8);
   }
 
-  &__title {
+  &_title {
     font-size: settings.font-size(title-md);
     margin: 0;
   }
 
-  &__lead {
+  &_lead {
     margin: 0;
     color: settings.color(ink-muted);
     font-size: settings.font-size(md);
@@ -177,8 +172,8 @@
 }
 
 // 特集
-.top-highlight {
-  &__grid {
+.top_highlight {
+  &_grid {
     display: grid;
     gap: settings.space(16);
     margin-top: settings.space(24);
@@ -188,14 +183,14 @@
     }
   }
 
-  &__card {
+  &_card {
     @include mixin.card;
     background: settings.color(card);
     display: grid;
     gap: settings.space(12);
   }
 
-  &__badge {
+  &_badge {
     align-self: flex-start;
     padding: settings.space(4) settings.space(12);
     border-radius: settings.radius(9999);
@@ -204,28 +199,28 @@
     font-size: settings.font-size(xs);
     margin: 0;
 
-    &--pink {
+    &.is_pink {
       background: settings.color(danger);
       color: settings.color(card);
     }
 
-    &--yellow {
+    &.is_yellow {
       background: settings.color(accent);
       color: settings.color(ink);
     }
   }
 
-  &__title {
+  &_title {
     margin: 0;
     font-size: settings.font-size(lg);
   }
 
-  &__text {
+  &_text {
     margin: 0;
     color: settings.color(ink-muted);
   }
 
-  &__meta {
+  &_meta {
     margin: 0;
     font-size: settings.font-size(sm);
     color: settings.color(primary-strong);
@@ -233,7 +228,7 @@
 }
 
 // サポート
-.top-support {
+.top_support {
   display: grid;
   gap: settings.space(24);
   background: settings.color(card);
@@ -241,28 +236,28 @@
   padding: settings.space(32);
   border: 1px solid settings.color(border);
 
-  &__content {
+  &_content {
     display: grid;
     gap: settings.space(12);
   }
 
-  &__eyebrow {
+  &_eyebrow {
     margin: 0;
     color: settings.color(primary-strong);
     font-size: settings.font-size(sm);
   }
 
-  &__title {
+  &_title {
     margin: 0;
     font-size: settings.font-size(title-md);
   }
 
-  &__text {
+  &_text {
     margin: 0;
     color: settings.color(ink-muted);
   }
 
-  &__list {
+  &_list {
     margin: settings.space(8) 0 0;
     padding-left: settings.space(20);
     color: settings.color(ink);
@@ -270,65 +265,65 @@
     gap: settings.space(8);
   }
 
-  &__actions {
+  &_actions {
     display: flex;
     flex-wrap: wrap;
     gap: settings.space(12);
     margin-top: settings.space(8);
   }
 
-  &__panel {
+  &_panel {
     display: grid;
     gap: settings.space(16);
   }
 
-  &__card {
+  &_card {
     @include mixin.card;
     display: grid;
     gap: settings.space(12);
 
-    &--light {
+    &.is_light {
       background: settings.color(primary-soft);
     }
   }
 
-  &__card-title {
+  &_card_title {
     margin: 0;
     font-size: settings.font-size(lg);
   }
 
-  &__card-text {
+  &_card_text {
     margin: 0;
     color: settings.color(ink-muted);
   }
 
-  &__card-info {
+  &_card_info {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: settings.space(12);
   }
 
-  &__card-label {
+  &_card_label {
     margin: 0;
     font-size: settings.font-size(xs);
     color: settings.color(ink-muted);
   }
 
-  &__card-value {
+  &_card_value {
     margin: settings.space(4) 0 0;
     font-size: settings.font-size(lg);
   }
 }
 
 // 転職の流れ
-.top-flow {
-  &__grid {
+.top_flow {
+  &_grid {
     display: grid;
     gap: settings.space(16);
     margin-top: settings.space(24);
   }
 
-  &__card {
+  &_card {
     background: settings.color(card);
     border-radius: settings.radius(12);
     padding: settings.space(20);
@@ -337,32 +332,32 @@
     gap: settings.space(8);
   }
 
-  &__step {
+  &_step {
     margin: 0;
     font-size: settings.font-size(xs);
     color: settings.color(primary-strong);
   }
 
-  &__title {
+  &_title {
     margin: 0;
     font-size: settings.font-size(lg);
   }
 
-  &__text {
+  &_text {
     margin: 0;
     color: settings.color(ink-muted);
   }
 }
 
 // 選ばれる理由
-.top-reason {
-  &__grid {
+.top_reason {
+  &_grid {
     display: grid;
     gap: settings.space(16);
     margin-top: settings.space(24);
   }
 
-  &__card {
+  &_card {
     background: settings.color(card);
     border-radius: settings.radius(12);
     padding: settings.space(24);
@@ -371,26 +366,26 @@
     gap: settings.space(8);
   }
 
-  &__title {
+  &_title {
     margin: 0;
     font-size: settings.font-size(lg);
   }
 
-  &__text {
+  &_text {
     margin: 0;
     color: settings.color(ink-muted);
   }
 }
 
 // FAQ
-.top-faq {
-  &__list {
+.top_faq {
+  &_list {
     display: grid;
     gap: settings.space(12);
     margin-top: settings.space(24);
   }
 
-  &__item {
+  &_item {
     background: transparent;
     border-radius: 0;
     padding: settings.space(16) 0;

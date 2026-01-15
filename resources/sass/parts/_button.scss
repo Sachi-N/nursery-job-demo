@@ -1,7 +1,7 @@
 @use '../base/settings' as settings;
 
 // ボタン
-.button {
+.p_button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -18,26 +18,26 @@
 
   &:hover {
     transform: translateY(-1px);
-    box-shadow: settings.$shadow-1;
+    box-shadow: settings.$shadow-md;
   }
 
-  &--primary {
+  &.is_primary {
     background: settings.color(accent);
     color: settings.color(ink);
   }
 
-  &--ghost {
+  &.is_ghost {
     background: transparent;
     color: settings.color(primary-strong);
     border-color: settings.color(primary-strong);
   }
 
-  &--light {
+  &.is_light {
     background: settings.color(primary-soft);
     color: settings.color(primary-strong);
   }
 
-  &--dark {
+  &.is_dark {
     background: settings.color(ink);
     color: settings.color(card);
   }

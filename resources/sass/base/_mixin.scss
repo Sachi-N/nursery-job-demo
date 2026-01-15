@@ -4,7 +4,7 @@
   background: settings.color(card);
   border-radius: settings.radius(8);
   padding: settings.space(24);
-  box-shadow: settings.$shadow-1;
+  box-shadow: settings.$shadow-md;
   border: 1px solid settings.color(border);
 }
 

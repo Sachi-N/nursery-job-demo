@@ -2,7 +2,7 @@
 @use '../base/mixin' as mixin;
 
 // 共通ヘッダー
-.site-header {
+.c_header {
   position: sticky;
   top: 0;
   z-index: 10;
@@ -11,7 +11,7 @@
   border-bottom: 1px solid settings.color(border);
 }
 
-.site-header__inner {
+.c_header_inner {
   max-width: 1180px;
   margin: 0 auto;
   padding: settings.space(16) settings.space(20);
@@ -20,13 +20,13 @@
   gap: settings.space(16);
 }
 
-.site-header__actions {
+.c_header_actions {
   display: flex;
   align-items: center;
   gap: settings.space(12);
 }
 
-.site-logo {
+.c_logo {
   font-family: settings.$font-family-rounded;
   font-size: settings.font-size(xl);
   font-weight: settings.font-weight(bold);
@@ -37,12 +37,12 @@
   margin-right: auto;
 }
 
-.site-nav {
+.c_nav {
   display: none;
   gap: settings.space(20);
   font-size: settings.font-size(sm);
 
-  &__link {
+  &_link {
     color: settings.color(ink);
     text-decoration: none;
     font-weight: settings.font-weight(medium);

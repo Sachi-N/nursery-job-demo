@@ -1,5 +1,4 @@
 @use '../base/settings' as settings;
-@use '../base/reset';
 
 // コンテナ
 .container {
@@ -7,6 +6,6 @@
   margin: 0 auto;
 }
 
-.container--narrow {
+.container.is_narrow {
   max-width: settings.container(narrow);
 }

@@ -1,12 +1,12 @@
 @use '../base/settings' as settings;
 
 // 共通フッター
-.site-footer {
+.c_footer {
   background: settings.color(card);
   border-top: 1px solid settings.color(border);
 }
 
-.site-footer__inner {
+.c_footer_inner {
   max-width: 1180px;
   margin: 0 auto;
   padding: settings.space(32) settings.space(20);
@@ -14,12 +14,12 @@
   gap: settings.space(16);
 }
 
-.site-footer__text {
+.c_footer_text {
   margin: 0;
   color: settings.color(ink-muted);
 }
 
-.site-footer__links {
+.c_footer_links {
   display: flex;
   flex-wrap: wrap;
   gap: settings.space(16);
@@ -31,7 +31,7 @@
   }
 }
 
-.site-footer__copy {
+.c_footer_copy {
   margin: 0;
   font-size: settings.font-size(xs);
   color: settings.color(ink-muted);

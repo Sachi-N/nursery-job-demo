@@ -93,11 +93,11 @@ $radii: (
 );
 
 //シャドウ
-$shadow-1: 0 8px 24px rgba(15, 23, 42, 0.12);
+$shadow-md: tokens.$shadow-md;
 
 //mapにないkeyはエラーにする
 @function _get($map, $key, $label) {
-  @if map.has-key($map, $key) {
+  @if map.has_key($map, $key) {
     @return map.get($map, $key);
   }
 

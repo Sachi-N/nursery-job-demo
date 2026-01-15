@@ -1,49 +1,49 @@
 @use '../base/settings' as settings;
 
 // 検索UI
-.search-ui {
+.c_search {
   background: settings.color(card);
   border: 1px solid settings.color(border);
   border-radius: settings.radius(12);
-  box-shadow: settings.$shadow-1;
+  box-shadow: settings.$shadow-md;
   padding: settings.space(48);
   display: grid;
   gap: settings.space(16);
 
-  &__title {
+  &_title {
     font-size: settings.font-size(title-md);
     color: settings.color(ink);
     margin: 0;
   }
 
-  &__note {
+  &_note {
     margin: settings.space(8) 0 0;
     color: settings.color(ink-muted);
     font-size: settings.font-size(sm);
   }
 
-  &__form {
+  &_form {
     display: grid;
     gap: settings.space(12);
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   }
 
-  &__field {
+  &_field {
     display: grid;
     gap: settings.space(8);
 
-    &--full {
+    &.is_full {
       grid-column: 1 / -1;
     }
   }
 
-  &__label {
+  &_label {
     font-size: settings.font-size(sm);
     color: settings.color(ink-muted);
   }
 
-  &__input,
-  &__select {
+  &_input,
+  &_select {
     border: 1px solid settings.color(border);
     border-radius: settings.radius(8);
     padding: settings.space(12);
@@ -51,11 +51,11 @@
     box-sizing: border-box;
   }
 
-  &__input--full {
+  &_input.is_full {
     width: 100%;
   }
 
-  &__actions {
+  &_actions {
     display: flex;
     gap: settings.space(12);
     flex-wrap: wrap;
@@ -63,7 +63,7 @@
     justify-content: center;
   }
 
-  &__actions .button {
+  &_actions .p_button {
     font-size: settings.font-size(md);
   }
 }
